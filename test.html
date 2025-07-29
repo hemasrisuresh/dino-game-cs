@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            z-index: -2;
+            height: 50vh;
+            position: relative;
+            background-color: aqua;
+        }
+        #inner1,#inner2{
+            width:200px;
+            margin: 10px;
+            height: 200px;
+            background-color: yellow;
+        }
+        #inner1{
+            z-index: 1;
+            margin-left: 50px;
+            background-color: green;
+        }
+        #inner2{ 
+            position:absolute;
+            z-index: -1;
+            top: 20px;
+            left: 20px;
+        }
+        .loading{
+            animation-name: load;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            
+        }
+        @keyframes load{
+            from{
+                width: 1px;
+            }
+            to{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inner1" >
+
+        </div>
+        <div id="inner2">
+
+        </div>
+    </div>
+</body>
+</html>
